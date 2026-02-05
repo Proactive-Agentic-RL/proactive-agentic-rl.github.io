@@ -448,11 +448,12 @@
             and to submit answers that are aligned with the underlying context. The finetuning baseline contains the proactive RL algorithm UserRL introduced in the same paper. 
             The main evaluation metrics include <strong>Pass@U-k</strong>, which measures the pass rate when allowing up to <em>k</em> user-involved actions per trajectory (i.e., \( U(\tau) = k \)), 
             <strong>Score</strong>, which denotes the task reward, 
-            and the <strong>User-Involvement Rate (UR)</strong>, defined as \( \mathbb{E}[\,U(\tau) / |\tau|\,] \).
+            and the <strong>User-Involvement Rate (UR)</strong>, defined as \( \mathbb{E}[\,U(\tau) / |\tau|\,] \). We aim to train proactive agents with high Pass@U-k and low UR.
           </p>
 
           <p>
-            <strong>Baseline Comparison.</strong> Our BAO learns more efficient proactive behaviors, and pushes forward the Pareto frontiers of agents and approaches or exceeds commercial models.
+            <strong>Baseline Comparison.</strong> 
+            The Pareto Frontier of RL-trained proactive agents are visualized in Figure 4. We can clearly see that BAO learns more efficient proactive behaviors, and pushes forward the Pareto frontiers of agents with a significantly high performance increase rate when receiving more feedback information from users and a higher upper bound of performance when working with users.
           </p>
           <div class="content has-text-centered">
 
@@ -474,7 +475,14 @@
           
 
           <p>
-            <strong>Behavior Analysis.</strong> In this work, we highlight the trade-off between task performance and user engagement efforts. 
+            <strong>Behavior Analysis.</strong> How does <i>Retrospective Reasoning</i> and <i>Prospective Planning</i> behaviors contribute to the overall performance? We conduct an ablation study by controlling the
+            enhanced behavior types included in the SFT dataset. The results are visualized in Figure 5.
+
+            
+          </p>
+
+          <p>
+            We observe that <i>Retrospective Reasoning</i> increases the upper bound of the pass rate, as reflected by the highest Score value, which corresponds to the pass rate achievable when the agent is allowed to submit answers until the interaction budget is exhausted. However, retrospective reasoning alone does not necessarily improve Pass@U-1. One straightforward explanation is that only when the number increases does the incorporation of history start to show its capability. In contrast, <i>Prospective Planning</i> improves Pass@U-1 due to its planning-ahead capability. Nevertheless, prospective planning does not achieve the highest Score, indicating that under longer interaction horizons, retrospective reasoning is still required to effectively summarize past information and connect it to future actions. By combining these two behaviors, we achieve balanced performance in both metrics, as demonstrated by the full BAO implementation.
           </p>
 
           <div class="content has-text-centered">
@@ -496,7 +504,12 @@
           </div>
 
           <p>
-            <strong>Proactive Exploration.</strong> In this work, we highlight the trade-off between task performance and user engagement efforts. 
+            <strong>Proactive Exploration.</strong> How does BAO improve information collection strategies and hidden context exploration? We analyze exploration capability through two forms of diversity: diversity in environment queries, which reflects how effectively the agent collects information from the environment, and diversity in answer submissions, which captures the agent's ability to explore alternative reasoning paths after receiving negative user feedback. We utilize self-BLEU score and embedding similarity of the <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #1a73e8;">NV-Embed-v2 model</a> to analyze the diversity. The results are presented in Figure 6.
+          </p>
+
+          <p>
+            The results of diversity in environment queries comfirm that our BAO significantly increases diversity during the information-gathering stage, as reflected by lower lexical and semantic similarity scores. Results from answer submissions diversity further indicate that after information gathering, BAO explores the answer space more efficiently by reducing answer redundancy when submitting answers following failures. 
+            Another finding is that relying solely on multi-turn behavior enhancement during SFT is insufficient to preserve these desirable exploration behaviors; combining it with regularization during RL yields the strongest capabilities. 
           </p>
 
           <div class="content has-text-centered">
@@ -507,7 +520,7 @@
             width="100%"
           >
           <p class="subtitle is-6 has-text-centered">
-            Figure 6. 
+            Figure 6. Environment queries and submitted answers diversity evaluation. BAO queries more diverse information during interactions and explores answer space better by generating more diverse answers.
           </p>
 
           <img
@@ -518,7 +531,11 @@
           </div>
 
           <p>
-            <strong>Reward Hacking Discussion.</strong> In this work, we highlight the trade-off between task performance and user engagement efforts. 
+            <strong>Reward Hacking Discussion.</strong> How does the notorious reward hacking issue in LLM-as-Judges affect proactive agent training?  A common form of reward hacking involves repeatedly generating long answers to confuse the judge model, inducing it to leak hidden knowledge or assign positive rewards even when the response does not explicitly satisfy the target rubrics. 
+          </p>
+
+          <p>
+            To quantitatively characterize this issue, we visualize the average number of answer tokens per trajectory, the reward score, and pass@U-1 in training and testing in Figure 7. We observe that UserRL produces significantly longer answers and achieves higher training scores and pass@U-1. However, during evaluation, both the score and pass@U-1 drop sharply, despite a high reward translation rate (RTR=0.166), defined as the ratio between evaluation and training rewards. In contrast, although our BAO attains relatively lower scores and pass@U-1 during training, it consistently outperforms UserRL at evaluation time while maintaining a comparably high RTR =0.545. This indicates that BAO effectively mitigates reward hacking by encouraging desirable interaction behaviors and applying behavior regularization during RL training.
           </p>
 
           <div class="content has-text-centered">
