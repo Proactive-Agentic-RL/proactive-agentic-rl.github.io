@@ -32,13 +32,23 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 </head>
 <body>
 
@@ -52,13 +62,13 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://yihangyao.github.io">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
       </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
         </a>
@@ -76,7 +86,7 @@
             PhotoShape
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
 
   </div>
@@ -88,46 +98,45 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
-          <div class="is-size-5 publication-authors">
+          <h1 class="title is-2.5 publication-title">Pushing Forward Pareto Frontiers of Proactive Agents with Behavioral Agentic Optimization</h1>
+          <div class="is-size-6 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://yihangyao.github.io/">Yihang Yao</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://czp16.github.io/">Zhepeng Cen</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://hhlin.info/">Haohong Lin</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://shiqiliu-67.github.io/">Shiqi Liu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://zuxin.me/">Zuxin Liu</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="https://jiachengzhuml.github.io/">Jiacheng Zhu</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://williamd4112.github.io/">Zhang-Wei Hong</a><sup>3</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://laixishi.github.io/">Laixi Shi</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://safeai-lab.github.io/">Ding Zhao</a><sup>1</sup>
             </span>
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Carnegie Mellon University,</span>
+            <span class="author-block"><sup>2</sup>Salesforce AI Research,</span>
+            <span class="author-block"><sup>3</sup>Massachusetts Institute of Technology,</span>
+            <span class="author-block"><sup>4</sup>Johns Hopkins University</span>
           </div>
 
-          <div class="column has-text-centered">
+          <div class="is-size-8 column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -135,16 +144,6 @@
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -164,7 +163,7 @@
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Hugging Face</span>
                   </a>
             </div>
 
@@ -178,21 +177,25 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+      <img
+        id="teaser"
+        src="./static/images/teaser-BAO.png"
+        alt="Teaser"
+        height="100%"
+      >
+
+      <h2 class="subtitle is-6 has-text-centered">
+        Figure 1. <span class="dnerf"><strong>BAO</strong></span> pushes forward Pareto Frontier between
+        <strong>user engagement</strong> and <strong>task performance</strong>
+        with two key components:<br> (Left) multi-turn behavior enhancement and (Middle)
+        multi-turn behavior regularized RL.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -247,7 +250,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -258,10 +261,9 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Proactive large language model (LLM) agents aim to actively plan, query, and interact over multiple turns, enabling efficient task completion beyond passive instruction following and making them essential for real-world, user-centric applications. Agentic reinforcement learning (RL) has recently emerged as a promising solution for training such agents in multi-turn settings, allowing interaction strategies to be learned from feedback. However, existing pipelines face a critical challenge in balancing task performance with user engagement, as passive agents can not efficiently adapt to users' intentions while overuse of human feedback reduces their satisfaction. To address this trade-off, we propose BAO, an agentic RL framework that combines behavior enhancement to enrich proactive reasoning and information-gathering capabilities with behavior regularization to suppress inefficient or redundant interactions and align agent behavior with user expectations. We evaluate BAO on multiple tasks from the UserRL benchmark suite, and demonstrate that it substantially outperforms RL baselines under controlled comparisons while achieving comparable or even superior performance to frontier LLM agents, highlighting its effectiveness for training proactive, user-aligned LLM agents in complex multi-turn scenarios.
           </p>
-          <p>
+          <!-- <p>
             Our approach augments neural radiance fields
             (NeRF) by optimizing an
             additional continuous volumetric deformation field that warps each observed point into a
@@ -272,8 +274,8 @@
             By adapting principles from geometry processing and physical simulation to NeRF-like
             models, we propose an elastic regularization of the deformation field that further
             improves robustness.
-          </p>
-          <p>
+          </p> -->
+          <!-- <p>
             We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
             photos/videos into deformable NeRF
             models that allow for photorealistic renderings of the subject from arbitrary
@@ -283,14 +285,14 @@
             images of the same pose at different viewpoints. We show that our method faithfully
             reconstructs non-rigidly deforming scenes and reproduces unseen views with high
             fidelity.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -298,7 +300,7 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
@@ -307,10 +309,10 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered"> -->
 
       <!-- Visual Effects. -->
-      <div class="column">
+      <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
           <p>
@@ -322,11 +324,11 @@
                     type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -341,25 +343,54 @@
           </div>
 
         </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
+      </div> -->
+    <!-- </div> -->
+    <!--/ Matting. --> 
 
     <!-- Animation. -->
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered"> 
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h3 class="title is-3">Pareto Frontiers of Proactive Agents</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            <strong>Proactive Agents.</strong> Unlike passive LLMs that only respond to given prompts, proactive agents operate over multiple turns and can actively decide when and how to interact with environments and users. They strategically gather information, reason over the history, and determine the right moment to provide an answer, rather than treating each query as an isolated task.
+          </p>
+          <p>
+            <strong>Multi-Objective Optimization.</strong> Training a proactive agent involves balancing two competing objectives: maximizing task performance while minimizing unnecessary user engagement. We formalize this as a weighted learning objective:
+          </p>
+          <div>
+          \[
+          \max_{\pi}\ \mathbb{E}_{\tau \sim \pi}\big[ R(\tau) - w\,U(\tau) \big]
+          \]
+          </div>
+          <p>
+          Here, <em>R(τ)</em> measures task performance accumulated over the trajectory, 
+          <em>U(τ)</em> counts the number of user-involved interactions, 
+          and the weight <em>w</em> controls the trade-off between task accuracy and user effort.
+          </p>
+          <p>
+            <strong>Pareto Frontiers.</strong> These two objectives are often in conflict: more user interaction can improve task performance, but at the cost of higher user burden. Simply tuning the weight <em>w</em> is insufficient to resolve this tension as shown in the figure below. Instead, the goal of this work is to learn Pareto-optimal policies that achieve the best possible trade-offs: improving task performance without extensively requesting unnecessary user efforts.
+          </p>
+          
+        </div>
+        <div class="content has-text-centered">
+
+          <img
+            id="teaser"
+            src="./static/images/motivation-problem-formulation.png"
+            alt="Teaser"
+            
+            width="85%"
+          >
+          <p class="subtitle is-6 has-text-centered">
+            Figure 2. 
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
+        
+        <!-- <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
             <img src="./static/images/interpolate_start.jpg"
                  class="interpolation-image"
@@ -380,19 +411,140 @@
                  alt="Interpolation end reference image."/>
             <p class="is-bold">End Frame</p>
           </div>
-        </div>
+        </div> -->
         <br/>
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <h3 class="title is-3">Behavioral Agentic Optimization (BAO)</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            <strong>Multi-Turn Behaviors.</strong> We introduce two classes of multi-turn behaviors: <strong>(1) Retrospective Reasoning</strong>, which integrates and revises information from history, and <strong>(2) Prospective Planning</strong>, which bridges current reasoning to future actions. With Examples in the following figure.
+          </p>
+          <p>
+            <strong>BAO.</strong> Our method has two key components: <strong>(i) behavior enhancement</strong>, which enforces inter-turn proactive behaviors; and <strong>(ii) behavior-regularized RL</strong>, which shapes behaviors during policy update. A simplified algorithmic overview is also presented in the following figure.
           </p>
         </div>
         <div class="content has-text-centered">
+
+          <img
+            id="teaser"
+            src="./static/images/example-and-algorithm.png"
+            alt="Teaser"
+            
+            width="80%"
+          >
+          <p class="subtitle is-6 has-text-centered">
+            Figure 3. 
+          </p>
+        </div>
+
+        <h3 class="title is-3">Experiments on User-Centric Tasks</h3>
+        <div class="content has-text-justified">
+          <p>
+            We conduct experiments on three tasks: Function-Gym, Telepathy-Gym, and Turtle-Gym from the user-centric benchmark 
+            <a href="https://arxiv.org/abs/2509.19736" style="color: #1a73e8;">UserRL</a>.
+            These tasks require the agent to discover hidden contextual information through interaction 
+            and to submit answers that are aligned with the underlying context. The finetuning baseline contains the proactive RL algorithm UserRL introduced in the same paper. 
+            The main evaluation metrics include <strong>Pass@U-k</strong>, which measures the pass rate when allowing up to <em>k</em> user-involved actions per trajectory (i.e., \( U(\tau) = k \)), 
+            <strong>Score</strong>, which denotes the task reward, 
+            and the <strong>User-Involvement Rate (UR)</strong>, defined as \( \mathbb{E}[\,U(\tau) / |\tau|\,] \).
+          </p>
+
+          <p>
+            <strong>Baseline Comparison.</strong> Our BAO learns more efficient proactive behaviors, and pushes forward the Pareto frontiers of agents and approaches or exceeds commercial models.
+          </p>
+          <div class="content has-text-centered">
+
+          <img
+            id="teaser"
+            src="./static/images/pareto-frontier-function-gym.png"
+            width="70%"
+          >
+          <p class="subtitle is-6 has-text-centered">
+            Figure 4. 
+          </p>
+
+          <img
+            id="teaser"
+            src="./static/images/takeaway1.png"
+            width="100%"
+          >
+          </div>
+          
+
+          <p>
+            <strong>Behavior Analysis.</strong> In this work, we highlight the trade-off between task performance and user engagement efforts. 
+          </p>
+
+          <div class="content has-text-centered">
+
+          <img
+            id="teaser"
+            src="./static/images/behavior_analysis.png"
+            width="70%"
+          >
+          <p class="subtitle is-6 has-text-centered">
+            Figure 5. 
+          </p>
+
+          <img
+            id="teaser"
+            src="./static/images/takeaway2.png"
+            width="100%"
+          >
+          </div>
+
+          <p>
+            <strong>Proactive Exploration.</strong> In this work, we highlight the trade-off between task performance and user engagement efforts. 
+          </p>
+
+          <div class="content has-text-centered">
+
+          <img
+            id="teaser"
+            src="./static/images/exploration_analysis.png"
+            width="100%"
+          >
+          <p class="subtitle is-6 has-text-centered">
+            Figure 6. 
+          </p>
+
+          <img
+            id="teaser"
+            src="./static/images/takeaway3.png"
+            width="100%"
+          >
+          </div>
+
+          <p>
+            <strong>Reward Hacking Discussion.</strong> In this work, we highlight the trade-off between task performance and user engagement efforts. 
+          </p>
+
+          <div class="content has-text-centered">
+
+          <img
+            id="teaser"
+            src="./static/images/reward_hacking_analysis.png"
+            width="70%"
+          >
+          <p class="subtitle is-6 has-text-centered">
+            Figure 7. 
+          </p>
+
+          <img
+            id="teaser"
+            src="./static/images/takeaway4.png"
+            width="100%"
+          >
+          </div>
+
+          <p>
+          <strong>Traces Visualization.</strong> In this work, we highlight the trade-off between task performance and user engagement efforts. 
+        </p>
+        </div>
+        
+        <!-- <div class="content has-text-centered">
           <video id="replay-video"
                  controls
                  muted
@@ -402,7 +554,7 @@
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
           </video>
-        </div>
+        </div> -->
         <!--/ Re-rendering. -->
 
       </div>
@@ -456,7 +608,7 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!-- <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -464,7 +616,7 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
